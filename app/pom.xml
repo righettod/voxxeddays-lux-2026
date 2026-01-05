@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>lu.righettod</groupId>
 	<artifactId>app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>app</name>
 	<description>Demo app for the presentation</description>
 	<properties>
@@ -21,10 +21,22 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
 		</dependency>
+		<!-- Used for all the rounds excepting the round 4 -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
 			<version>3.0.6</version>
+		</dependency>
+		<!-- Used for the round 4: Explicit vulnerable version to CVE-2025-66516 wanted -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-pdf-module</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 
