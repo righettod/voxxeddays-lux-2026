@@ -1,7 +1,10 @@
 import requests
 import sys
 import base64
+from termcolor import colored
+from colorama import just_fix_windows_console
 
+just_fix_windows_console()
 test_file_name = sys.argv[1]
 test_file_path = f"../pdf-samples/{test_file_name}"
 with open(test_file_path, "rb") as file:
@@ -10,7 +13,7 @@ with open(test_file_path, "rb") as file:
     base64_string = base64_bytes.decode("utf-8")
 content = {"name": test_file_name, "base64EncodedContent": base64_string}
 response = requests.post("http://localhost:8080/upload", json=content)
-status = "rejected"
+status = colored("rejected", "red", attrs=["bold"])
 if response.status_code == 200:
-    status = "accepted"
-print(f"File {status}  - HTTP {response.status_code} response code received.")
+    status = colored("accepted", "green", attrs=["bold"])
+print(f"File {status} => HTTP response code {response.status_code} received.")
