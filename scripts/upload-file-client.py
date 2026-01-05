@@ -11,6 +11,9 @@ with open(test_file_path, "rb") as file:
 content = {"name": test_file_name, "base64EncodedContent": base64_string}
 response = requests.post("http://upload-service.local:8080/files", json=content)
 status = "REJECTED"
+location = ""
 if response.status_code == 201:
     status = "ACCEPTED"
-print(f"ℹ️ File {status}: HTTP response code {response.status_code} received.")
+    if test_file_name == "round6.pdf":
+        location = f" (location '{response.headers["Location"]}')"
+print(f"ℹ️ File {status}{location}: HTTP response code {response.status_code} received.")

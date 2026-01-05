@@ -4,9 +4,8 @@ import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.PDDocumentNameDictionary;
-import org.apache.pdfbox.pdmodel.interactive.action.*;
-import org.apache.pdfbox.pdmodel.interactive.annotation.AnnotationFilter;
-import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotation;
+import org.apache.pdfbox.pdmodel.interactive.action.PDAction;
+import org.apache.pdfbox.pdmodel.interactive.action.PDActionURI;
 import org.apache.pdfbox.pdmodel.interactive.annotation.PDAnnotationLink;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.tika.metadata.Metadata;
@@ -14,21 +13,30 @@ import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.pdf.PDFParser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 public class FileUploadController {
+
+    private static final Map<String, FileInformation> MEMORY_STORAGE = new HashMap<>();
+
+    @GetMapping(produces = "application/json", value = "/files/{fileIdentifier}")
+    public ResponseEntity<FileInformation> retrieveFile(@PathVariable String fileIdentifier) {
+        if (MEMORY_STORAGE.containsKey(fileIdentifier)) {
+            FileInformation data = MEMORY_STORAGE.get(fileIdentifier);
+            return ResponseEntity.ok(data);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     @PostMapping(consumes = "application/json", produces = "application/json", value = "/files")
     public ResponseEntity<String> upload(@RequestBody FileInformation fileInformation) {
@@ -40,7 +48,8 @@ public class FileUploadController {
             //Code for the round 4 triggering
             //triggeringRound4(fileInformation);
             additionalValidationAfterRound4(fileInformation);
-            additionalValidationAfterRound5(fileInformation);
+            //additionalValidationAfterRound5(fileInformation);
+            additionalValidationAfterRound6(fileInformation);
         } catch (SecurityException e) {
             return ResponseEntity.badRequest().body("File rejected.");
         } catch (IllegalStateException e) {
@@ -49,7 +58,9 @@ public class FileUploadController {
 
         /* File is accepted */
         try {
-            URI fileLocation = new URI("/files/" + UUID.randomUUID());
+            String fileIdentifier = UUID.randomUUID().toString();
+            URI fileLocation = new URI("/files/" + fileIdentifier);
+            MEMORY_STORAGE.put(fileIdentifier, fileInformation);
             return ResponseEntity.created(fileLocation).body("File stored.");
         } catch (URISyntaxException e) {
             return ResponseEntity.internalServerError().body("URI creation error!");
@@ -155,4 +166,18 @@ public class FileUploadController {
             throw new SecurityException(e);
         }
     }
+
+    private void additionalValidationAfterRound6(FileInformation fileInformation) throws SecurityException {
+        try {
+            try (PDDocument document = Loader.loadPDF(fileInformation.getDecodedContent())) {
+                ByteArrayOutputStream cleanedPDFBytes = new ByteArrayOutputStream();
+                document.save(cleanedPDFBytes);
+                String base64EncodedContent = Base64.getEncoder().encodeToString(cleanedPDFBytes.toByteArray());
+                fileInformation.setBase64EncodedContent(base64EncodedContent);
+            }
+        } catch (Exception e) {
+            throw new SecurityException(e);
+        }
+    }
+
 }
