@@ -56,16 +56,16 @@
   * Slide:
     * Your servior has a lifespan represented by the level of exasperation of the development team caused by my feedback.
     * If it reach 100%, they warned me that they're going to throw me out the window.
-* Section **Let's the story begin**
-  * For each slide in this section:
-    * The team finished the implementation of the service.
-    * *Show the list of all the check performed by the implementation aginst the PDF file.*
-    * *Show the test file I used and explain why the file is malicious.*
-    * *Next round...*
-* Section **Conclusion**
-  * Slide:
-    * *Show the final User Story that should be initially specified.*
-    * *Conclude that all the frustration meet could be avoided by a more precise User Story.*
+  * Section **Let's the story begin**
+    * For each slide in this section:
+      * The team finished the implementation of the service.
+      * *Show the list of all the check performed by the implementation aginst the PDF file.*
+      * *Show the test file I used and explain why the file is malicious.*
+      * *Next round...*
+  * Section **Conclusion**
+    * Slide:
+      * *Show the final User Story that should be initially specified.*
+      * *Conclude that all the frustration meet could be avoided by a more precise User Story.*
 
 ## PDF files
 
