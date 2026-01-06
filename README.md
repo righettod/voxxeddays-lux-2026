@@ -17,9 +17,9 @@
   * [presentation.pptx](presentation.pptx): Contains the presentation.
   * [presentation-schemas.md](presentation-schemas.md): Contains the schemas used into presentation created using [mermaid](https://mermaid.js.org/).
 * 📂 Folders:
-  * [app](app/): Contains the web service used for the context of the presentation.
+  * [app](app/): Contains the web service used for the context of the presentation (developed with [IntelliJ IDEA CE](https://www.jetbrains.com/idea/download/?section=windows)).
   * [scripts](scripts/): Contains utility scripts used for the preparation of the presentation.
-  * [pdf-samples](pdf-samples/): Contains all the PDF file used for the presentation.
+  * [pdf-samples](pdf-samples/): Contains all the PDF files used for the presentation.
 
 ## Plan
 
@@ -76,7 +76,7 @@
 * **Round n°1**: File that is an EXE renamed as PDF.
 * **Round n°2**: File with JS code.
 * **Round n°3**: File with an malicious attachement.
-* **Round n°4**: File with an XXE in XFA form: `python xfa_xxe_poc_gen.py --mode oob --scheme https --ip righettod.requestcatcher.com --port 443 -o round4.pdf`
+* **Round n°4**: File with an XXE in XFA form: `python xfa-xxe-poc-gen.py --mode oob --scheme https --ip righettod.requestcatcher.com --port 443 -o round4.pdf`
 * **Round n°5**: File with malicious links.
 * **Round n°6**: File with malicious file hidden concatenated.
 
