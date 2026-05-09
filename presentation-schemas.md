@@ -22,3 +22,48 @@ sequenceDiagram
         end
     end
 ```
+
+Enhanced version thanks for Claude:
+
+```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#EAF3DE",
+    "primaryTextColor": "#27500A",
+    "primaryBorderColor": "#639922",
+    "secondaryColor": "#E6F1FB",
+    "secondaryTextColor": "#0C447C",
+    "secondaryBorderColor": "#378ADD",
+    "tertiaryColor": "#FAEEDA",
+    "tertiaryTextColor": "#633806",
+    "tertiaryBorderColor": "#BA7517",
+    "noteBkgColor": "#FAEEDA",
+    "noteTextColor": "#633806",
+    "noteBorderColor": "#BA7517",
+    "loopTextColor": "#3C3489",
+    "activationBkgColor": "#EEEDFE",
+    "activationBorderColor": "#534AB7",
+    "signalColor": "#27500A",
+    "signalTextColor": "#27500A",
+    "labelBoxBkgColor": "#EEEDFE",
+    "labelBoxBorderColor": "#534AB7",
+    "labelTextColor": "#3C3489"
+  }
+}}%%
+sequenceDiagram
+    participant S as 🧑‍💻 Your servitor
+    participant T as 👥 Team
+    T->>T: 🏗️ Implement & deploy<br/>a first version of the service
+    loop 🔁 Until safe
+        S->>S: 🧑‍💻 Access to deployed service & <br/>attempt malicious upload
+        alt 🐞 Successful attempt
+            S->>T: 📋 Findings & fix proposals
+            T->>T: 🛠️ Harden & deploy<br/>a new version
+            T->>T: 🤬 Increases the level of<br/>exasperation toward your servitor
+            T->>S: 🤝 Go for the next test round
+        else ✅ Safe
+            S->>T: 🎉 Service approved
+        end
+    end
+```

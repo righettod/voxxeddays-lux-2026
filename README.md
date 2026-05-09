@@ -4,11 +4,6 @@
 
 💬 This folder contains all my work for the presentation proposed to the [VOXXED LU 2026](https://luxembourg.voxxeddays.com/en/) conference.
 
-🤖 Title candidates (thanks to GEMINI for the help):
-
-* The Devil is in the Payloads: The grueling journey of implementing a file upload feature.
-* Expect the Unexpected: Why implementing a file transfers is harder than they look.
-
 ## Content
 
 * 📄 Files:
@@ -20,52 +15,6 @@
   * [app](app/): Contains the web service used for the context of the presentation (developed with [IntelliJ IDEA CE](https://www.jetbrains.com/idea/download/?section=windows)).
   * [scripts](scripts/): Contains utility scripts used for the preparation of the presentation.
   * [pdf-samples](pdf-samples/): Contains all the PDF files used for the presentation.
-
-## Plan
-
-* Section **Introduction**
-  * Slide:
-    * Most of the modern web based application provide a feature to allow a user to send a file.
-    * Such feature is called "file upload".
-    * It is very common that PDF format was accepted for the file.
-  * Slide:
-    * Been able to provide malicious information to an application in an import source of security vulnerability ([source](https://owasp.org/Top10/2025/A05_2025-Injection/)).
-    * In 2025, 50 security vulnerabilities affecting a "file upload" feature were identified.
-    * `Add proof of computation here`.
-  * Slide:
-    * PDF is a safe format and a "file upload" is simple to implement, no?
-    * Let's deep dive and explore together *The Devil is in the Payloads* concept through a story...
-    * `Add a meme about doubt here`.
-* Section **Context of our story**
-  * Slide:
-    * Our story take place in an company, precisly in the team in charge of the complete management of the client portal.
-    * The company wanted to offer the possibility to their client to attach files alongside their private chat with with their advisors.
-    * The development team was using an agile methodology for the implementation of feature.
-  * Slide:
-    * The team received the following minimal **User Story** to implement the file upload feature.
-      * **User Story**: `As a user, I want to upload a PDF file in the chat so that I can share documents with my advisors.`
-      * **Acceptance Criteria**:
-        * The system successfully transfers the file from the user interface to the storage server.
-        * Only PDF files are allowed.
-        * File size is limited to 10 MB.
-    * The team decided to implement a REST web service that the front end (single page application) will used to upload a file.
-  * Slide:
-    * Your servior was integrated to the development team to validate the security posture of the REST web service (called service from here).
-    * The working process defined with the team was the following:
-    * `Add sequence flow here`.
-  * Slide:
-    * Your servior has a lifespan represented by the level of exasperation of the development team caused by my feedback.
-    * If it reach 100%, they warned me that they're going to throw me out the window.
-  * Section **Let's the story begin**
-    * For each slide in this section:
-      * The team finished the implementation of the service.
-      * *Show the list of all the check performed by the implementation aginst the PDF file.*
-      * *Show the test file I used and explain why the file is malicious.*
-      * *Next round...*
-  * Section **Conclusion**
-    * Slide:
-      * *Show the final User Story that should be initially specified.*
-      * *Conclude that all the frustration meet could be avoided by a more precise User Story.*
 
 ## PDF files
 
