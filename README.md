@@ -29,6 +29,13 @@
 * **Round n°5**: File with malicious links.
 * **Round n°6**: File with malicious file hidden concatenated.
 
+## TODO
+
+* [ ] Commencer l'histoire par il était une fois…
+* [ ] Mettre un marqueur viusel pour identifier quand j'expliquer le but du test.
+* [ ] Convertir le passer par la fenêtre finale en passer par la fenêtre après chaque fail avec un compteur de barre vie global.  
+* [ ] Compléter la partie AI avec les cas trouvé et non trouvé par Claude.
+
 ## References
 
 * <https://owasp.org/Top10/2025>
