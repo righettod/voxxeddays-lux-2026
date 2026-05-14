@@ -2,7 +2,17 @@
 
 ## Introduction
 
-💬 This folder contains all my work for the presentation proposed to the [VOXXED LU 2026](https://luxembourg.voxxeddays.com/en/) conference.
+💬 This folder contains all my work for the presentation proposed to the [VOXXED LU 2026](https://luxembourg.voxxeddays.com/en/) conference and accepted.
+
+ℹ️ This presentation was also proposed the following event:
+* Thales Cyber Meet-Up Edition 2026
+  * <https://cybermeetup.be/>
+  * 17 September 2026.
+  * ✅ Proposal accepted.
+* luxembourg Software Testing Event:
+  * <https://lste.lu/>
+  * 26 November 2026
+  * 🔬 Proposal under review.
 
 ## Content
 
@@ -15,6 +25,7 @@
   * [app](app/): Contains the web service used for the context of the presentation (developed with [IntelliJ IDEA CE](https://www.jetbrains.com/idea/download/?section=windows)).
   * [scripts](scripts/): Contains utility scripts used for the preparation of the presentation.
   * [pdf-samples](pdf-samples/): Contains all the PDF files used for the presentation.
+  * [ai-generated-images](ai-generated-images/): Contains images generated with ChatGPT and GEMINI. User prompt used are into the slides.
 
 ## PDF files
 
@@ -32,8 +43,8 @@
 ## TODO
 
 * [ ] Commencer l'histoire par il était une fois…
-* [ ] Mettre un marqueur viusel pour identifier quand j'expliquer le but du test.
-* [ ] Convertir le passer par la fenêtre finale en passer par la fenêtre après chaque fail avec un compteur de barre vie global.  
+* [x] Mettre un marqueur viusel pour identifier quand j'expliquer le but du test.
+* [x] Convertir le passer par la fenêtre finale en passer par la fenêtre après chaque fail avec un compteur de barre vie global.  
 * [ ] Compléter la partie AI avec les cas trouvé et non trouvé par Claude.
 
 ## References
