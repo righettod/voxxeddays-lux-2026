@@ -8,7 +8,7 @@
 
 ℹ️ This presentation was also proposed the following event:
 
-*** Thales Cyber Meet-Up Edition 2026:**
+* **Thales Cyber Meet-Up Edition 2026**:
   * <https://cybermeetup.be/>
   * 17 September 2026.
   * ✅ Proposal accepted.
