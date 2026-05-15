@@ -8,13 +8,13 @@
 
 ℹ️ This presentation was also proposed the following event:
 
-* Thales Cyber Meet-Up Edition 2026
+*** Thales Cyber Meet-Up Edition 2026:**
   * <https://cybermeetup.be/>
   * 17 September 2026.
   * ✅ Proposal accepted.
-* luxembourg Software Testing Event:
+* **Luxembourg Software Testing Event**:
   * <https://lste.lu/>
-  * 26 November 2026
+  * 26 November 2026.
   * 🔬 Proposal under review.
 
 ## Content
