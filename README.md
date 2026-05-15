@@ -1,4 +1,4 @@
-# Presnetation on the security aspect of an file transfer implementation
+# Presentation regarding the security aspect of an file transfer implementation
 
 [![BuildLab](https://github.com/righettod/voxxeddays-lux-2026/actions/workflows/build-lab.yml/badge.svg)](https://github.com/righettod/voxxeddays-lux-2026/actions/workflows/build-lab.yml)
 
