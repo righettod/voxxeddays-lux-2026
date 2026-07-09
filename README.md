@@ -17,6 +17,10 @@
   * 26 November 2026.
   * 🔬 Proposal under review.
 
+## Talk
+
+https://www.youtube.com/watch?v=wCZEg9lUlLo
+
 ## Content
 
 * 📄 Files:
