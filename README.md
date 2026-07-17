@@ -15,7 +15,7 @@
 * **Luxembourg Software Testing Event**:
   * <https://lste.lu/>
   * 26 November 2026.
-  * 🔬 Proposal under review.
+  * ✅ Proposal accepted.
 
 ## Talk
 
